@@ -102,7 +102,7 @@ for stock in name_to_history:
             decrease_ten.append(stock)
 
 message = Mail(
-    from_email='yeet@yeet.com',
+    from_email='coderTa@gmail.com',
     to_emails='benjamin.ta@yahoo.com',
     subject='Stock prices updates:',
     html_content="""
@@ -111,9 +111,9 @@ message = Mail(
     <p>Stocks that dropped below bottom envelope: %s</p>
     <p>Stocks that increased 10 percent or more: %s</p>
     <p>Stocks that decreased 10 percent or more: %s</p>
-    """ % datetime.today(), running_avg_crossed, under_avg_crossed, increase_ten, decrease_ten)
+    """ % (datetime.today(), running_avg_crossed, under_avg_crossed, increase_ten, decrease_ten))
 try:
-    sg = SendGridAPIClient('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')
+    sg = SendGridAPIClient('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')
     response = sg.send(message)
     print(response.status_code)
     #print(response.body)
@@ -124,3 +124,6 @@ except Exception as e:
 #print(name_to_history)
 #print(name_to_price)
 #print(len(name_to_price))
+
+# My API code
+# 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
